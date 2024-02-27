@@ -21,8 +21,8 @@ body {
   height: 60px;
 }
 .nav .logo {
-  width: 86px;
-  height: 34px;
+  width: 100px;
+  height: 35px;
 }
 .nav .content {
   display: flex;
@@ -72,6 +72,7 @@ body {
   line-height: 60px;
   height: 60px;
   text-align: center;
+  font-weight: bold;
 }
 .common-sub-title {
   font-size: 20px;
@@ -87,25 +88,28 @@ body {
   height: 360px;
 }
 .hot-product .left .pic {
-  width: 100%;
+  width: 90%;
   height: 360px;
+  margin-top: 80px;
 }
 .hot-product .right .box .pic {
   margin-right: 20px;
   width: 150px;
   height: 100px;
+  margin-top: 80px;
 }
 .hot-product .right .box {
   line-height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 00px;
 }
 .hot-product .right .box:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 80px;
 }
 .hot-product .right .box .name {
   width: 150px;
   font-size: 18px;
   font-weight: bold;
+  margin-top: 80px;
 }
 .hot-product .right .box .desc {
   font-size: 15px;
@@ -113,9 +117,10 @@ body {
 }
 
 .our-products .box {
-  width: 32%;
+  width: 30%;
   margin-right: 2%;
   margin-top: 30px;
+  margin-top: 100px;
 }
 .our-products .box:nth-child(3n) {
   margin-right: 0;
@@ -123,15 +128,16 @@ body {
 .our-products .box .pic {
   display: block;
   width: 100%;
-  height: 280px;
+ 
 }
 .our-products .box .name {
-  margin-top: 20px;
-  font-size: 25px;
+  margin-top: 18px;
+  font-size: 18px;
   text-align: center;
+  font-weight: bold;
 }
 .our-products .box .desc {
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
   text-align: center;
 }
@@ -141,26 +147,31 @@ body {
   height: 360px;
 }
 .new-arrival .left .pic {
-  width: 100%;
+  width: 80%;
   height: 360px;
+  margin-left: 100px;
+  margin-top: 150px;
+
 }
 .new-arrival .right .box {
   padding: 10px;
   line-height: 30px;
   margin-left: 100px;
   margin-bottom: 30px;
+  margin-top: 50px;
   box-shadow: 2px 2px 10px #ccc;
+  margin-top: 80px;
 }
 .new-arrival .right .box:last-of-type {
   margin-bottom: 0;
 }
 .new-arrival .right .box .name {
-  width: 150px;
+  width: 260px;
   font-size: 18px;
   font-weight: bold;
 }
 .new-arrival .right .box .desc {
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
 }
 
@@ -176,6 +187,7 @@ body {
   display: block;
   width: 100%;
   height: 235px;
+  margin-top: 80px;
 }
 .about-us .box .name {
   margin-top: 20px;
@@ -183,8 +195,9 @@ body {
   font-weight: bold;
 }
 .about-us .box .desc {
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
+  margin-top: 5px;
 }
 
 .our-services .box {
@@ -192,6 +205,7 @@ body {
   margin-right: 2%;
   margin-top: 30px;
   box-shadow: 2px 2px 10px #ccc;
+  margin-top: 80px;
 }
 .our-services .box:nth-child(3n) {
   margin-right: 0;
@@ -199,16 +213,18 @@ body {
 .our-services .box .pic {
   margin: 40px auto 0 auto;
   display: block;
-  width: 248px;
-  height: 192px;
+  width: 110px;
+  height: 96px;
 }
 .our-services .box .name {
-  margin-top: 20px;
+  margin-top: 15%;
   font-size: 18px;
+  font-weight: bold;
   text-align: center;
 }
 .our-services .box .desc {
   font-size: 15px;
+  margin-top: 10px;
   font-style: italic;
   text-align: center;
 }
@@ -217,7 +233,8 @@ body {
   display: block;
   text-decoration: none;
   width: 80px;
-  height: 32px;
+  height: 30px;
+  margin-top: 80px;
   color: #000;
 }
 
@@ -225,6 +242,7 @@ body {
   margin: 0 auto;
   width: 424px;
   font-size: 18px;
+  margin-top: 80px;
 }
 .contact-us .box .pic {
   display: block;
@@ -233,11 +251,12 @@ body {
 }
 .contact-us .box .name {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
 }
 .contact-us .box .desc {
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
   text-align: center;
 }
@@ -251,6 +270,7 @@ body {
   color: #fff;
   background-color: aquamarine;
   text-align: center;
+  font-weight: bold;
 }
 .contact-us .box .tips {
   text-align: center;
@@ -261,9 +281,8 @@ body {
   margin-bottom: 30px;
 }
 .contact-us .info .item {
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #ccc;
+  font-size: 15px;
+  background-color: #e6e6e6;
   padding: 2px 8px;
 }
 
