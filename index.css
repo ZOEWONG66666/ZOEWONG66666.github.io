@@ -2,16 +2,20 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   color: #000;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
 }
+
 .flex {
   display: flex;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -20,10 +24,12 @@ body {
   background-color: #fff;
   height: 60px;
 }
+
 .nav .logo {
   width: 100px;
   height: 35px;
 }
+
 .nav .content {
   display: flex;
   justify-content: space-between;
@@ -31,6 +37,7 @@ body {
   font-size: 16px;
   height: 60px;
 }
+
 .nav .content .item {
   color: #000;
   text-decoration: none;
@@ -43,16 +50,19 @@ body {
   background: url(./images/banner.png) no-repeat center/100% 100%;
   overflow: hidden;
 }
+
 .banner .title {
   margin-top: 200px;
   font-size: 38px;
   font-weight: bold;
 }
+
 .banner .desc {
   margin-top: 20px;
   font-size: 15px;
   font-style: italic;
 }
+
 .banner .btn {
   margin-top: 80px;
   display: block;
@@ -64,6 +74,13 @@ body {
   color: #fff;
   text-decoration: none;
   box-sizing: border-box;
+  -webkit-transition: all .8s;
+  transition: all .8s
+}
+
+.banner .btn:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .common-title {
@@ -74,11 +91,13 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
 .common-sub-title {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
 }
+
 .area {
   margin-top: 100px;
 }
@@ -87,30 +106,36 @@ body {
   width: 50%;
   height: 360px;
 }
+
 .hot-product .left .pic {
   width: 90%;
   height: 360px;
   margin-top: 80px;
 }
+
 .hot-product .right .box .pic {
   margin-right: 20px;
   width: 150px;
   height: 100px;
   margin-top: 80px;
 }
+
 .hot-product .right .box {
   line-height: 30px;
   margin-bottom: 00px;
 }
+
 .hot-product .right .box:last-of-type {
   margin-bottom: 80px;
 }
+
 .hot-product .right .box .name {
   width: 150px;
   font-size: 18px;
   font-weight: bold;
   margin-top: 80px;
 }
+
 .hot-product .right .box .desc {
   font-size: 15px;
   font-style: italic;
@@ -122,20 +147,24 @@ body {
   margin-top: 30px;
   margin-top: 100px;
 }
+
 .our-products .box:nth-child(3n) {
   margin-right: 0;
 }
+
 .our-products .box .pic {
   display: block;
   width: 100%;
- 
+
 }
+
 .our-products .box .name {
   margin-top: 18px;
   font-size: 18px;
   text-align: center;
   font-weight: bold;
 }
+
 .our-products .box .desc {
   font-size: 15px;
   font-style: italic;
@@ -146,6 +175,7 @@ body {
   width: 50%;
   height: 360px;
 }
+
 .new-arrival .left .pic {
   width: 80%;
   height: 360px;
@@ -153,6 +183,7 @@ body {
   margin-top: 150px;
 
 }
+
 .new-arrival .right .box {
   padding: 10px;
   line-height: 30px;
@@ -162,14 +193,17 @@ body {
   box-shadow: 2px 2px 10px #ccc;
   margin-top: 80px;
 }
+
 .new-arrival .right .box:last-of-type {
   margin-bottom: 0;
 }
+
 .new-arrival .right .box .name {
   width: 260px;
   font-size: 18px;
   font-weight: bold;
 }
+
 .new-arrival .right .box .desc {
   font-size: 15px;
   font-style: italic;
@@ -180,20 +214,24 @@ body {
   margin-right: 2%;
   margin-top: 30px;
 }
+
 .about-us .box:nth-child(3n) {
   margin-right: 0;
 }
+
 .about-us .box .pic {
   display: block;
   width: 100%;
   height: 235px;
   margin-top: 80px;
 }
+
 .about-us .box .name {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
 }
+
 .about-us .box .desc {
   font-size: 15px;
   font-style: italic;
@@ -207,27 +245,32 @@ body {
   box-shadow: 2px 2px 10px #ccc;
   margin-top: 80px;
 }
+
 .our-services .box:nth-child(3n) {
   margin-right: 0;
 }
+
 .our-services .box .pic {
   margin: 40px auto 0 auto;
   display: block;
   width: 110px;
   height: 96px;
 }
+
 .our-services .box .name {
   margin-top: 15%;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
+
 .our-services .box .desc {
   font-size: 15px;
   margin-top: 10px;
   font-style: italic;
   text-align: center;
 }
+
 .our-services .box .arrow {
   margin: 20px auto;
   display: block;
@@ -244,22 +287,26 @@ body {
   font-size: 18px;
   margin-top: 80px;
 }
+
 .contact-us .box .pic {
   display: block;
   width: 424px;
   height: 288px;
 }
+
 .contact-us .box .name {
   margin-top: 20px;
   font-size: 28px;
   font-weight: bold;
   text-align: center;
 }
+
 .contact-us .box .desc {
   font-size: 15px;
   font-style: italic;
   text-align: center;
 }
+
 .contact-us .box .btn {
   margin: 20px auto 10px auto;
   display: block;
@@ -272,14 +319,17 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
 .contact-us .box .tips {
   text-align: center;
 }
+
 .contact-us .info {
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
 }
+
 .contact-us .info .item {
   font-size: 15px;
   background-color: #e6e6e6;
@@ -292,6 +342,7 @@ body {
   background-color: rgb(172, 174, 249);
   box-sizing: border-box;
 }
+
 .footer .logo {
   width: 145px;
   height: 36px;
