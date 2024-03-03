@@ -335,24 +335,27 @@
               action="https://formspree.io/f/xoqgwyer"
               method="POST"
               class="contact-form"
+              target="hideIframe1"
             >
-              <label>
-                First Name:
-                <input type="text" name="firstName" />
-              </label>
-              <label>
-                Last Name:
-                <input type="text" name="lastName" />
-              </label>
+              <div class="flex space-between">
+                <label style="width: 48%">
+                  First Name:
+                  <input type="text" name="firstName" />
+                </label>
+                <label style="width: 48%">
+                  Last Name:
+                  <input type="text" name="lastName" />
+                </label>
+              </div>
               <label>
                 Your email:
                 <input type="email" name="email" />
               </label>
               <label>
                 Your message:
-                <textarea name="message"></textarea>
+                <textarea name="message" style="height: 200px"></textarea>
               </label>
-              <button type="submit">Send</button>
+              <button type="submit" onsubmit="return false">Send</button>
             </form>
           </div>
         </div>
@@ -360,9 +363,34 @@
     </div>
 
     <div class="footer">
-      <div class="container">
-        <img src="./images/footer-logo.png" alt="" />
+      <div class="container flex space-between">
+        <div>
+          <img src="./images/footer-logo.png" alt="" />
+          <div>xxxxxxxxx</div>
+        </div>
+        <div class="flex">
+          <div class="text-box">
+            <div class="title">Home</div>
+            <div>xxxxxxxxx</div>
+            <div>xxxxxxxxx</div>
+            <div>xxxxxxxxx</div>
+          </div>
+          <div class="text-box">
+            <div class="title">Hot Products</div>
+            <div>xxxxxxxxx</div>
+            <div>xxxxxxxxx</div>
+            <div>xxxxxxxxx</div>
+          </div>
+          <div class="text-box">
+            <div class="title">Other Products</div>
+            <div>xxxxxxxxx</div>
+            <div>xxxxxxxxx</div>
+            <div>xxxxxxxxx</div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <iframe name="hideIframe1" style="display: none"></iframe>
   </body>
 </html>
