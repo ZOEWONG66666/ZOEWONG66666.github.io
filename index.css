@@ -20,9 +20,20 @@ body {
   flex-wrap: wrap;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #fff;
   height: 60px;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
 }
 
 .nav .logo {
@@ -74,8 +85,8 @@ body {
   color: #fff;
   text-decoration: none;
   box-sizing: border-box;
-  -webkit-transition: all .8s;
-  transition: all .8s
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
 .banner .btn:hover {
@@ -99,7 +110,7 @@ body {
 }
 
 .area {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .hot-product .left {
@@ -152,10 +163,48 @@ body {
   margin-right: 0;
 }
 
+.our-products .box .pic-wrap {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
 .our-products .box .pic {
   display: block;
   width: 100%;
+}
 
+.our-products .box .pic-wrap .overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.our-products .box .pic-wrap .overlay::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translateY(-50%, -50%);
+}
+
+.our-products .box:hover .pic-wrap .overlay {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .our-products .box .name {
@@ -181,7 +230,6 @@ body {
   height: 360px;
   margin-left: 100px;
   margin-top: 150px;
-
 }
 
 .new-arrival .right .box {
@@ -245,6 +293,16 @@ body {
   box-shadow: 2px 2px 10px #ccc;
   margin-top: 80px;
 }
+.our-services .box:hover {
+  background: #3956de;
+  border-color: #3956de;
+  color: #fff;
+}
+.our-services .box:hover .arrow {
+  background: #3956de;
+  border-color: #3956de;
+  color: #fff;
+}
 
 .our-services .box:nth-child(3n) {
   margin-right: 0;
@@ -282,7 +340,6 @@ body {
 }
 
 .contact-us .box {
-  margin: 0 auto;
   width: 424px;
   font-size: 18px;
   margin-top: 80px;
@@ -334,6 +391,26 @@ body {
   font-size: 15px;
   background-color: #e6e6e6;
   padding: 2px 8px;
+}
+
+.contact-us .contact-form label {
+  display: block;
+  margin-bottom: 20px;
+}
+.contact-us .contact-form input,
+textarea {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+.contact-us .contact-form button[type='submit'] {
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .footer {
