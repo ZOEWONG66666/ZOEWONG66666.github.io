@@ -414,6 +414,7 @@ textarea {
   color: #fff;
   background-color: #5252e4;
   border: 1px solid #5252e4;
+  cursor: pointer;
 }
 
 .footer {
@@ -425,14 +426,73 @@ textarea {
 }
 .footer .text-box {
   margin-left: 100px;
+  text-align: center;
 }
 .footer .title {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 35px;
 }
 
 .footer .logo {
   width: 145px;
   height: 36px;
   margin-bottom: 10px;
+}
+
+.footer .left {
+  line-height: 30px;
+  margin-bottom: 00px;
+  margin-top: 10px; /* 在下一个同级div上方添加间距 */
+}
+
+.footer .left .desc {
+  font-size: 18px;
+}
+
+.footer .right .desc {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer .right .item {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.tip-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 50%;
+  top: 61px;
+  transform: translate(-50%, 0);
+  margin: 0 auto;
+  width: auto; /* Could be more or less, depending on screen size */
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tip-modal span {
+  padding: 0 10px; /* 左边和右边各10px的内边距 */
+  margin: 0 5px; /* 左边和右边各5px的外边距 */
+}
+
+.success-message {
+  background-color: #f0f9eb;
+  border-color: 1px solid #e1f3d8;
+  color: #67c23a;
+}
+
+.warning-message {
+  background-color: #fdf6ec;
+  border-color: 1px solid #faecd8;
+  color: #e6a23c;
 }

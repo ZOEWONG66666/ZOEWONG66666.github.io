@@ -332,10 +332,9 @@
         <div class="right">
           <div class="box">
             <form
-              action="https://formspree.io/f/xoqgwyer"
-              method="POST"
               class="contact-form"
               target="hideIframe1"
+              id="sendMessageForm"
             >
               <div class="flex space-between">
                 <label style="width: 48%">
@@ -355,7 +354,7 @@
                 Your message:
                 <textarea name="message" style="height: 200px"></textarea>
               </label>
-              <button type="submit" onsubmit="return false">Send</button>
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
@@ -366,31 +365,98 @@
       <div class="container flex space-between">
         <div>
           <img src="./images/footer-logo.png" alt="" />
-          <div>xxxxxxxxx</div>
+          <div class="left">
+            <div class="desc">Started in 2010, focus on commercial display</div>
+            <div class="desc">One-stop service</div>
+          </div>
         </div>
-        <div class="flex">
+        <div class="flex right">
           <div class="text-box">
             <div class="title">Home</div>
-            <div>xxxxxxxxx</div>
-            <div>xxxxxxxxx</div>
-            <div>xxxxxxxxx</div>
+            <div class="desc"><a href="#hot-product" class="item">Hot Product</a></div>
+            <div class="desc"><a href="#our-product" class="item">Our Products</a></div>
+            <div class="desc"><a href="#new-arrival" class="item">New Arrival</a></div>
+            <div class="desc"><a href="#about-us" class="item">About Us</a></div>
+            <div class="desc"><a href="#our-services" class="item">Our Services</a></div>
+            <div class="desc"><a href="#contact-us" class="item">Contact Us</a></div>
           </div>
           <div class="text-box">
-            <div class="title">Hot Products</div>
-            <div>xxxxxxxxx</div>
-            <div>xxxxxxxxx</div>
-            <div>xxxxxxxxx</div>
+            <div class="title"><a href="https://visionaio.en.alibaba.com/productlist.html?spm=a2700.shop_plgr.88.15" target="_blank" class="item">Hot Products</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-935539643/Comercial_Android_Tablet.html" target="_blank" class="item">Interactive Tablet</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-937349522/Wall_Mount_Tablet.html" target="_blank" class="item">Wall Display</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-938160396/L_Shape_Android_Tablet.html" target="_blank" class="item">L Shape Tablet</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-937800158/Meeting_Room_Tablet.html" target="_blank" class="item">Meeting Room Tablet</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-935429484/WiFi_Photo_Frame.html" target="_blank" class="item">WiFi Photo Frame</a></div>
           </div>
           <div class="text-box">
             <div class="title">Other Products</div>
-            <div>xxxxxxxxx</div>
-            <div>xxxxxxxxx</div>
-            <div>xxxxxxxxx</div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-935635603/Stretched_Bar_Display.html" target="_blank" class="item">Stretched Bar Display</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productgrouplist-935904014/Self_Service_Payment_Kiosk.html" target="_blank" class="item">Self Service Payment Kisosk</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productlist.html?spm=a2700.shop_plgr.88.15" target="_blank" class="item">Android Player Box</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productlist.html?spm=a2700.shop_plgr.88.15" target="_blank" class="item">Android Motherboards</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productlist.html?spm=a2700.shop_plgr.88.15" target="_blank" class="item">POE Router</a></div>
+            <div class="desc"><a href="https://visionaio.en.alibaba.com/productlist.html?spm=a2700.shop_plgr.88.15" target="_blank" class="item">Tablet Accessories</a></div>
           </div>
         </div>
       </div>
     </div>
 
     <iframe name="hideIframe1" style="display: none"></iframe>
+
+    <!-- success Modal -->
+    <div id="successModal" class="tip-modal success-message">
+      <span>send successfully !</span>
+    </div>
+
+    <!-- warning Modal -->
+    <div id="warningModal" class="tip-modal warning-message">
+      <span>Send failed !</span>
+    </div>
+
   </body>
 </html>
+<script>
+
+  // 获取表单元素
+  var form = document.getElementById('sendMessageForm');
+
+  // 为表单添加提交事件监听器
+  form.onsubmit = function(event) {
+    // 阻止表单默认的提交行为
+    event.preventDefault();
+    // 使用AJAX提交表单
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://8.138.21.252/visionMail/customermessage/send', true); // 替换为实际的表单提交URL
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // 请求成功，显示模态框
+        document.getElementById('successModal').style.display = 'block';
+        // 延迟3秒后关闭模态框
+        setTimeout(function() {
+          document.getElementById('successModal').style.display = 'none';
+        }, 3000);
+      } else if (xhr.readyState == 4 && xhr.status != 200){
+        var jsonResponse = JSON.parse(xhr.responseText);
+        var error = jsonResponse.error;
+        if (error !== undefined) {
+          document.getElementById('warningModal').querySelector('span').textContent = error;
+        }
+        // 请求失败，显示模态框
+        document.getElementById('warningModal').style.display = 'block';
+        // 延迟3秒后关闭模态框
+        setTimeout(function() {
+          document.getElementById('warningModal').style.display = 'none';
+        }, 3000);
+      }  
+    };
+
+    // 将表单数据转换为查询字符串
+    var formData = new FormData(form);
+    var queryString = new URLSearchParams(formData).toString();
+
+    // 发送请求
+    xhr.send(queryString);
+  };
+  </script>
