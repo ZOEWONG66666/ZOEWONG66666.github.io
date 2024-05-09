@@ -339,20 +339,20 @@
               <div class="flex space-between">
                 <label style="width: 48%">
                   First Name:
-                  <input type="text" name="firstName" />
+                  <input type="text" name="firstName" required/>
                 </label>
                 <label style="width: 48%">
                   Last Name:
-                  <input type="text" name="lastName" />
+                  <input type="text" name="lastName" required/>
                 </label>
               </div>
               <label>
                 Your email:
-                <input type="email" name="email" />
+                <input type="email" name="email" required/>
               </label>
               <label>
                 Your message:
-                <textarea name="message" style="height: 200px"></textarea>
+                <textarea name="message" style="height: 200px" required></textarea>
               </label>
               <button type="submit">Send</button>
             </form>
@@ -372,7 +372,7 @@
         </div>
         <div class="flex right">
           <div class="text-box">
-            <div class="title">Home</div>
+            <div class="title"><a href="#top" class="item">Home</a></div>
             <div class="desc"><a href="#hot-product" class="item">Hot Product</a></div>
             <div class="desc"><a href="#our-product" class="item">Our Products</a></div>
             <div class="desc"><a href="#new-arrival" class="item">New Arrival</a></div>
