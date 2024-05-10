@@ -402,6 +402,9 @@ body {
   font-size: 15px;
   background-color: #e6e6e6;
   padding: 2px 8px;
+  margin-top: 10px;
+  margin-right: .6rem;
+  border-radius: .3rem;
 }
 
 .contact-us .contact-form label {
